@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<style>
+    /*--common--*/
+html{
+	max-width:2200px;
+	margin:auto;
+	overflow-x: hidden;
+}
+:root {
+	--btn-color: #21b573;
+	--link-color: #ffffff;
+	--contact-icon-color: #5d7ef6;
+	--social-icon-color: #4c5a71;
+	--black-color: #000000;
+	--white-color: #ffffff;
+	--light-blue-color: #afaee7;
+
+}
+h1, h2, h3, h4, h5, h6, a, p, li, ul, ol {
+	font-family: 'Poppins', sans-serif !important;
+}
+a{
+	text-decoration: none !important;
+}
+a:hover{
+	color:var(--contact-icon-color) !important;
+	transition:0.5s;
+}
+img{
+	width:100%;
+}
+.width-full {
+	width:100% !important;
+}
+.bold-text {
+	font-weight:700;
+}
+.italic-font{
+	font-style: italic;
+}
+.txt-white{
+	color: var(--white-color) !important;
+}
+.txt-black{
+	color: var(--black-color) !important;
+}
+.txt-green{
+	color: var(--btn-color) !important;
+}
+.txt-light-blue{
+	color: var(--light-blue-color) !important;
+}
+section.page-banner {
+	height: 400px;
+    display: flex;
+    align-items: center;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+/*--End common--*/
+
+/*--Services--*/
+
+.services-header-part{
+    padding: 40px;
+    display: flex;
+    
+}
+.grey-box {
+    background-color: #FAF9F6;  
+    height: 480px;
+    width: 400px;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.grey-box:hover {
+    transform: translateY(-10px); 
+}
+.icon-container{
+    padding-top: 15%;
+}
+.circle-container {
+    width: 90px; 
+    height: 90px;
+    background-color: white; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.circle-container img {
+    width: 50%; 
+    height: 50%;
+}
+.item-description{
+    margin-top: 40px;
+    margin-left: 25px;
+    top: 65%; 
+    left: 50%;
+}
+.item-title{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-weight: 700;  /*--bold-text--*/
+    font-family: 'Poppins', sans-serif; /*--h5--*/
+}
+.item-content{
+    padding-bottom: 18px;
+    color: var(--black-color);
+}
+.overlay-parts {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover; 
+    background-position: center;
+    border-radius: 10px;
+}
+
+.grey-box:hover .overlay-parts {
+    display: flex; 
+}
+
+.svg-white {
+    fill: white;
+    margin-top: 125px;
+    left: 0;
+    z-index: 1;
+}
+.svg-gray{
+    fill: #FAF9F6;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    z-index:2;
+}
+
+.middle-circle {
+    position: absolute;
+    width: 90px;
+    height: 90px; 
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3; 
+    top: 65%; 
+    left: 45%; 
+    transform: translate(-50%, -50%);
+    opacity: 0;
+   
+}
+
+.grey-box:hover .middle-circle,
+.grey-box:hover .item-description  {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+@keyframes fadeIn {
+    from {
+        top: 45%; 
+        opacity: 0; 
+    }
+    to {
+        top: 65%; 
+        opacity: 1; 
+    }
+}   
+
+.hover-item-description {
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 186px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #c0c0c0; 
+    padding: 10px;
+    width: 400px;
+    z-index: 3;
+    
+}
+
+.grey-box:hover .hover-item-description {
+    display: block;
+}
+
+.button-green {
+	display: inline-block !important;
+	background: var(--btn-color) !important;
+	color: var(--white-color) !important;
+	text-transform: uppercase !important;
+	padding: 12px 25px !important;
+	border-radius: 10px !important;
+	font-weight:600 !important;
+}
+.button-green:hover {
+	color: var(--white-color) !important;
+	background: var(--contact-icon-color) !important;
+	transition: 0.1s ease !important;
+}
+</style>
+</head>
+<body>  
+    <section class="services-section">
+        <div class="container">
+            <div class="row">
+                <div class="services-header-part">
+                    <div class="col-lg-6 col-md-6">
+                        <h2 class="txt-black bold-text" style="text-align: left;">Why Will You Choose<br><small> Our Services?</small></h2>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <p class="txt-black" style="text-align: left;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="grey-box">
+                        <div class="overlay-parts" style="background-image: url('/images/service-1.png')">
+                            <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367 67"><path d="M0.5,57L184,0,367.5,57H0.5Z"></path> <path d="M-34.5,68L149,11,332.5,68h-367Z"></path> <path d="M39.5,69L223,12,406.5,69H39.5Z"></path> </svg>
+                            <svg class="svg-gray" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 368 57"> <g><path d="M0.5,57L184,0,368,57H0.5Z"></path></g> </svg>
+                            <div class="circle-container middle-circle">
+                                <img class="svg-icon" decoding="async" width="100" height="100" src="https://demo.casethemes.net/bixol/wp-content/uploads/2020/10/service-icon-6.png">
+                            </div>
+                        </div>
+                        <div class="icon-container">
+                            <div class="circle-container">
+                                <img class="svg-icon" decoding="async" width="100" height="100" src="https://demo.casethemes.net/bixol/wp-content/uploads/2020/10/service-icon-6.png">
+                            </div>
+                        </div>
+                        <div class="item-description">
+                            <h5 class="item-title">
+                                Office Cleaning
+                            </h5>
+                            <p class="item-content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            </p>
+                            <a class="button-green" href="#">
+                                <span>Read more</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="grey-box">
+                        <div class="overlay-parts" style="background-image: url('/images/floor-cleaning.jpg')">
+                            <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367 67"><path d="M0.5,57L184,0,367.5,57H0.5Z"></path> <path d="M-34.5,68L149,11,332.5,68h-367Z"></path> <path d="M39.5,69L223,12,406.5,69H39.5Z"></path> </svg>
+                            <svg class="svg-gray" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 368 57"> <g><path d="M0.5,57L184,0,368,57H0.5Z"></path></g> </svg>
+                            <div class="circle-container middle-circle">
+                                <img class="svg-icon" decoding="async" width="100" height="100" src="https://demo.casethemes.net/bixol/wp-content/uploads/2020/10/service-icon-6.png">
+                            </div>
+                        </div>
+                        <div class="icon-container">
+                            <div class="circle-container">
+                                <img class="svg-icon" decoding="async" width="100" height="100" src="https://demo.casethemes.net/bixol/wp-content/uploads/2020/10/service-icon-6.png">
+                            </div>
+                        </div>
+                        <div class="item-description">
+                            <h5 class="item-title">
+                                Hard Floor Cleaning
+                            </h5>
+                            <p class="item-content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            </p>
+                            <a class="button-green" href="#">
+                                <span>Read more</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="grey-box">
+                        <div class="overlay-parts" style="background-image: url('/images/floor-vaccum.jpg')">
+                            <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367 67"><path d="M0.5,57L184,0,367.5,57H0.5Z"></path> <path d="M-34.5,68L149,11,332.5,68h-367Z"></path> <path d="M39.5,69L223,12,406.5,69H39.5Z"></path> </svg>
+                            <svg class="svg-gray" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 368 57"> <g><path d="M0.5,57L184,0,368,57H0.5Z"></path></g> </svg>
+                            <div class="circle-container middle-circle">
+                                <img class="svg-icon" decoding="async" width="100" height="100" src="https://demo.casethemes.net/bixol/wp-content/uploads/2020/10/service-icon-6.png">
+                            </div>
+                        </div>
+                        <div class="icon-container">
+                            <div class="circle-container">
+                                <img class="svg-icon" decoding="async" width="100" height="100" src="https://demo.casethemes.net/bixol/wp-content/uploads/2020/10/service-icon-6.png">
+                            </div>
+                        </div>
+                        <div class="item-description">
+                            <h5 class="item-title">
+                                Carpet Cleaning
+                            </h5>
+                            <p class="item-content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            </p>
+                            <a class="button-green" href="#">
+                                <span>Read more</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+   
